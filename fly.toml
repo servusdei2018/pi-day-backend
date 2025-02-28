@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for pi-day-backend on 2025-02-28T10:44:40-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'pi-day-backend'
+primary_region = 'ewr'
+
+[build]
+  dockerfile = './deploy/Dockerfile'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  min_machines_running = 1
+
+[[vm]]
+  size = 'shared-cpu-1x'

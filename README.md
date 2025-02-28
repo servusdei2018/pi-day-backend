@@ -22,6 +22,13 @@ Docker is used to deploy the application. The following commands are available:
 | `docker run -d --name pi-day-backend -p 8080:8080 pi-day-backend`      | Run the Docker container                         |
 | `docker stop pi-day-backend`                                           | Stop the Docker container                        |
 
+The service is deployed to Fly.io. To launch the service to your Fly.io account, run the following command:
+
+```bash
+$ fly launch
+```
+
+and follow the prompts.
 
 ## 📝 License
 
