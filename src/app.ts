@@ -5,6 +5,10 @@ import scoresRoute from "./routes/scoresRoute";
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Happy Pi Day!");
+});
+
 app.use("/", submitRoute);
 app.use("/", scoresRoute);
 
