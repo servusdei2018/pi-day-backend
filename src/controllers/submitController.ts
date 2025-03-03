@@ -11,5 +11,6 @@ export const submitScore: RequestHandler = (
     res.status(400).json({ error: "Bad request" });
   }
   scoreService.addScore({ name, score });
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.status(201).json({ message: "Score submitted" });
 };
